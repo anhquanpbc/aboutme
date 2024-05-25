@@ -32,7 +32,12 @@ body {
 }
 
 .home-nav-button {
-    float: right;
+    /* float: right; */
+    text-align: center;
+}
+
+.home-nav-button h4 {
+    display: inline;
 }
 
 #button {
@@ -44,11 +49,15 @@ body {
 /* page-header end */
 
 /* page-body begin */
-.page-body {}
+.page-body {
+    /* display: flex; */
+    /* flex-direction: column; */
+    /* align-items: center; */
+    width: 100%;
+}
 
 .basic-info {
-    display: flex;
-    justify-content: center;
+    width: 100%;
 }
 
 .basic-info h3,
@@ -56,6 +65,12 @@ h4 {
     text-align: center;
     margin-top: 10px;
     color: white;
+}
+
+.profile-photo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .profile-photo #photo {
@@ -68,6 +83,25 @@ h4 {
     background-size: cover;
     background-position: center;
     background-position: 50% 60%;
+}
+
+.skills {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding: 20px;
+}
+
+.skills h3 {
+    float: left;
+}
+
+.container-line {
+    width: 100%;
+    height: 2px;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    background-color: #2C3639;
 }
 
 /* page-body end */
