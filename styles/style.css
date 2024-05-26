@@ -71,6 +71,7 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-bottom: 50px;
 }
 
 .profile-photo #photo {
@@ -96,12 +97,47 @@ h4 {
     float: left;
 }
 
-.container-line {
-    width: 100%;
-    height: 2px;
-    margin-top: 5px;
-    margin-bottom: 5px;
-    background-color: #2C3639;
+.container-skills {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 30px;
+    gap: 20px;
+}
+
+.container-langs-tools {
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.langs-tools {
+    width: 50px;
+}
+
+.lt-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.lt-items h5 {
+    color: white;
 }
 
 /* page-body end */
+
+/* custom element */
+
+.container-line {
+    width: 100%;
+    height: 2px;
+    background-color: #2C3639;
+}
+
+.margin-20px {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+/* custom element */
