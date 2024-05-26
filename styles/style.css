@@ -32,7 +32,6 @@ body {
 }
 
 .home-nav-button {
-    /* float: right; */
     text-align: center;
 }
 
@@ -50,20 +49,18 @@ body {
 
 /* page-body begin */
 .page-body {
-    /* display: flex; */
-    /* flex-direction: column; */
-    /* align-items: center; */
     width: 100%;
+    padding: 20px;
 }
 
 .basic-info {
-    width: 100%;
+    margin-bottom: 20px;
 }
 
 .basic-info h3,
 h4 {
     text-align: center;
-    margin-top: 10px;
+    /* margin-top: 10px; */
     color: white;
 }
 
@@ -71,14 +68,13 @@ h4 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 50px;
+    margin-bottom: 10px;
 }
 
 .profile-photo #photo {
     width: 200px;
     height: 200px;
     border-radius: 50%;
-    margin-top: 30px;
     overflow: hidden;
     background-image: url('../imgs/kakashibw.jpg');
     background-size: cover;
@@ -86,18 +82,19 @@ h4 {
     background-position: 50% 60%;
 }
 
-.skills {
+.lt {
     display: flex;
     flex-direction: column;
-    width: 100%;
     padding: 20px;
 }
 
-.skills h3 {
-    float: left;
+.lt h3 {
+    color: white;
+    width: 100%;
+    text-align: center;
 }
 
-.container-skills {
+.container-lt {
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -112,7 +109,7 @@ h4 {
 }
 
 .langs-tools {
-    width: 50px;
+    width: 60px;
 }
 
 .lt-items {
@@ -123,6 +120,11 @@ h4 {
 
 .lt-items h5 {
     color: white;
+}
+
+#content {
+    color: white;
+    width: 100%;
 }
 
 /* page-body end */
@@ -140,4 +142,30 @@ h4 {
     margin-bottom: 20px;
 }
 
+.logo-32 img{
+    width: 32px;
+    height: 32px;
+}
+
 /* custom element */
+
+/* Phong cách cho các màn hình nhỏ (điện thoại) */
+@media (max-width: 600px) {
+}
+
+/* Phong cách cho các màn hình trung bình (máy tính bảng) */
+@media (min-width: 601px) and (max-width: 1024px) {
+}
+
+/* Phong cách cho các màn hình lớn (máy tính để bàn) */
+@media (min-width: 700px) {
+    .page-body {
+        display: flex;
+        /* justify-content: space-between; */
+    }
+    
+    .basic-info, .lt{
+        display: inline;
+        width: 50%;
+    }
+}

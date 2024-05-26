@@ -1,13 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <title>Anh Quân Blog</title>
 </head>
-
 <body>
     <div class="page-header">
         <!-- <h2 id="site-name">anhquanpbc</h2> -->
@@ -22,26 +20,38 @@
     <div class="page-body">
         <div class="basic-info">
             <div class="profile-photo">
-                <div id="photo" />
+                <div id="photo"></div>
             </div>
             <h3>Mei Mike</h3>
             <h4>Software Engineer</h4>
         </div>
-        <!-- <div class="container-line margin-20px" /> -->
-        <div class="skills">
+        <!-- <div class="container-line margin-20px"></div> -->
+        <div class="lt">
             <h3>Languages and Tools</h3>
-            <div class="container-skills">
+            <div class="container-lt">
                 <div class="container-langs-tools">
                     <div class="langs-tools">
                         <div class="lt-items">
                             <img src="./imgs/icons/c-sharp.png" alt="c-sharp">
-                            <h5>C Sharp</h5>
+                            <h5>C#</h5>
+                        </div>
+                    </div>
+                    <div class="langs-tools logo-32">
+                        <div class="lt-items">
+                            <img src="./imgs/icons/powershell.png" alt="GIT">
+                            <h5>Powershell</h5>
                         </div>
                     </div>
                     <div class="langs-tools">
                         <div class="lt-items">
-                            <img src="./imgs/icons/git.png" alt="GIT">
-                            <h5>GIT</h5>
+                            <img src="./imgs/icons/react.png" alt="React">
+                            <h5>React</h5>
+                        </div>
+                    </div>
+                    <div class="langs-tools">
+                        <div class="lt-items">
+                            <img src="./imgs/icons/nodejs.png" alt="NodeJS">
+                            <h5>NodeJS</h5>
                         </div>
                     </div>
                 </div>
@@ -54,32 +64,58 @@
                     </div>
                     <div class="langs-tools">
                         <div class="lt-items">
-                            <img src="./imgs/icons/css-3.png" alt="GIT">
+                            <img src="./imgs/icons/css-3.png" alt="CSS">
                             <h5>CSS</h5>
                         </div>
                     </div>
                     <div class="langs-tools">
                         <div class="lt-items">
-                            <img src="./imgs/icons/js.png" alt="GIT">
-                            <h5>Javascripts</h5>
+                            <img src="./imgs/icons/js.png" alt="JavaScript">
+                            <h5>JavaScript</h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="container-langs-tools">
+                    <div class="langs-tools logo-32">
+                        <div class="lt-items">
+                            <img src="./imgs/icons/pdq-logo.png" alt="c-sharp">
+                            <h5>PDQ</h5>
+                        </div>
+                    </div>
+                    <div class="langs-tools logo-32">
+                        <div class="lt-items">
+                            <img src="./imgs/icons/vscode.png" alt="GIT">
+                            <h5>VS Code</h5>
+                        </div>
+                    </div>
+                    <div class="langs-tools logo-32">
+                        <div class="lt-items">
+                            <img src="./imgs/icons/vs.png" alt="GIT">
+                            <h5>VS</h5>
                         </div>
                     </div>
                     <div class="langs-tools">
                         <div class="lt-items">
-                            <img src="./imgs/icons/react.png" alt="GIT">
-                            <h5>React</h5>
-                        </div>
-                    </div>
-                    <div class="langs-tools">
-                        <div class="lt-items">
-                            <img src="./imgs/icons/nodejs.png" alt="GIT">
-                            <h5>NodeJS</h5>
+                            <img src="./imgs/icons/git.png" alt="GIT">
+                            <h5>GIT</h5>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </div>
+    <!-- <div id="content"></div> -->
+    <script src="./scripts/marked.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            fetch('./markdown/content.md')
+                .then(response => response.text())
+                .then(markdownText => {
+                    const htmlContent = marked.parse(markdownText);
+                    document.getElementById('content').innerHTML = htmlContent;
+                })
+                .catch(error => console.error('Error fetching the markdown file:', error));
+        });
+    </script>
 </body>
-
 </html>
