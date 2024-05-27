@@ -1,3 +1,4 @@
+/* Reset and global styles */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -9,15 +10,13 @@ body {
     background-color: #3F4E4F;
 }
 
-/* page-header begin */
-
+/* Header styles */
 .page-header {
     display: flex;
     align-items: center;
     width: 100%;
     height: 70px;
-    background-color: #2C3639;
-    margin: 0;
+    background-color: #181d1f;
 }
 
 #site-name {
@@ -45,29 +44,28 @@ body {
     margin-right: 15px;
 }
 
-/* page-header end */
-
-/* page-body begin */
+/* Body styles */
 .page-body {
     width: 100%;
     padding: 20px;
+    gap: 20px;
 }
 
-.basic-info {
+.container {
+    /* display: flex;
+    flex-direction: column;
+    width: 48%; */
+    /* min-width: 400px; */
+    background-color: #2C3639;
+    border-radius: 15px;
     margin-bottom: 20px;
-}
-
-.basic-info h3,
-h4, h5 {
-    text-align: center;
-    /* margin-top: 10px; */
-    color: white;
 }
 
 .profile-photo {
     display: flex;
     flex-direction: column;
     align-items: center;
+    margin-top: 20px;
     margin-bottom: 10px;
 }
 
@@ -79,15 +77,11 @@ h4, h5 {
     background-image: url('../imgs/kakashibw.jpg');
     background-size: cover;
     background-position: center;
-    background-position: 50% 60%;
 }
-
-.lt {
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
+.container h3, h4, h5 {
+    text-align: center;
+    color: white;
 }
-
 .lt h3 {
     color: white;
     width: 100%;
@@ -98,18 +92,36 @@ h4, h5 {
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-top: 30px;
+    padding: 20px;
+    width: 100%;
     gap: 20px;
 }
 
-.container-langs-tools {
+#langs, #tools, #env-other, #os, #contacts {
     display: flex;
     flex-direction: row;
     gap: 10px;
+    /* tự động cho item xuống hàng dưới nếu không đủ chiều rộng */
+    flex-wrap: wrap;
+}
+.container-center{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+#contacts {
+    justify-content: center;
+    background-color:aliceblue;
+    width: fit-content;
+    padding: 3px 30px;
+    border-radius: 15px;
+    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
-.langs-tools {
-    width: 60px;
+#contacts img {
+    color: white;
+    text-decoration: none;
 }
 
 .lt-items {
@@ -118,7 +130,7 @@ h4, h5 {
     align-items: center;
 }
 
-.lt-items h5 {
+.lt-items h6 {
     color: white;
 }
 
@@ -127,45 +139,68 @@ h4, h5 {
     width: 100%;
 }
 
-/* page-body end */
-
-/* custom element */
-
+/* Custom styles */
 .container-line {
     width: 100%;
     height: 2px;
     background-color: #2C3639;
 }
 
-.margin-20px {
-    margin-top: 20px;
-    margin-bottom: 20px;
+.container-title{
+    background-color: #181d1f;
+    height: 50px;
+    width: 100%;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-bottom-left-radius: 0;
+    border-bottom-right-radius: 0;
+    margin: 0;
+    padding: 0;
 }
 
-.logo-32 img{
+#about-me{
+    color: white;
+    text-align: left;
+    padding: 0 20px 0 20px;
+}
+
+/* icon img 32px style*/
+.logo-32{
     width: 32px;
     height: 32px;
 }
+    
+/* Responsive styles */
+/* @media (max-width: 600px) {
+    
+} */
 
-/* custom element */
-
-/* Phong cách cho các màn hình nhỏ (điện thoại) */
-@media (max-width: 600px) {
-}
-
-/* Phong cách cho các màn hình trung bình (máy tính bảng) */
-@media (min-width: 601px) and (max-width: 1024px) {
-}
-
-/* Phong cách cho các màn hình lớn (máy tính để bàn) */
-@media (min-width: 700px) {
+@media (max-width: 1038px) {
     .page-body {
         display: flex;
-        /* justify-content: space-between; */
+        flex-direction: column;
+        align-items: center;
     }
-    
-    .basic-info, .lt{
-        display: inline;
-        width: 50%;
+    .container {
+        width: 100%;
+    }
+}
+
+@media (min-width: 1039px) {
+    /* Styles for large screens (desktops) */
+    .page-body {
+        /* display: grid;
+        grid-template-columns: 1fr 1fr; */
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        width: 100%;
+        /* align-items: center; */
+    }
+    .container {
+        width: 49%;
     }
 }

@@ -1,0 +1,93 @@
+[
+    {
+        "name": "CSharp",
+        "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/csharp/csharp-original.svg",
+        "type": 0
+    },
+    {
+        "name": "PowerShell",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/powershell/powershell-original.svg",
+        "type": 0
+    },
+    {
+        "name": "Python",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/python/python-original.svg",
+        "type": 0
+    },
+    {
+        "name": "Javascript",
+        "url": "https://raw.githubusercontent.com/devicons/devicon/master/icons/javascript/javascript-original.svg",
+        "type": 0
+    },
+    {
+        "name": "HTML5",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/html5/html5-original.svg",
+        "type": 0
+    },
+    {
+        "name": "CSS3",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/css3/css3-original.svg",
+        "type": 0
+    },
+    {
+        "name": "PDQ",
+        "url": "./imgs/icons/pdq-logo.png",
+        "type": 1
+    },
+    {
+        "name": "VS",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/visualstudio/visualstudio-original.svg",
+        "type": 1
+    },
+    {
+        "name": "VS Code",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/vscode/vscode-original.svg",
+        "type": 1
+    },
+    {
+        "name": "SQL Server",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/microsoftsqlserver/microsoftsqlserver-original.svg",
+        "type": 1
+    },
+    {
+        "name": "NodeJS",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/nodejs/nodejs-original.svg",
+        "type": 2
+    },
+    {
+        "name": "ReactJS",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/react/react-original.svg",
+        "type": 2
+    },
+    {
+        "name": "GIT",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/git/git-original.svg",
+        "type": 2
+    },
+    {
+        "name": "Windows",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/windows11/windows11-original.svg",
+        "type": 3
+    },
+    {
+        "name": "Linux",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/linux/linux-original.svg",
+        "type": 3
+    },
+    {
+        "name": "Ubuntu",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/ubuntu/ubuntu-original.svg",
+        "type": 3
+    },
+    {
+        "name": "Postman",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/postman/postman-original.svg",
+        "type": 2
+    },
+    {
+        "name": "Github",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/github/github-original.svg",
+        "type": 5,
+        "target": "https://github.com/anhquanpbc"
+    }
+]

@@ -11,113 +11,100 @@
         <!-- <h2 id="site-name">anhquanpbc</h2> -->
         <div class="home-nav-bar">
             <div class="home-nav-button">
-                <h4><a id="button" href="#home">Home</a></h4>
-                <h4><a id="button" href="#info">Info</a></h4>
-                <h4><a id="button" href="#contact">Contact</a></h4>
+                <h4><a id="button" href="#home">NONE</a></h4>
+                <h4><a id="button" href="#info">SET</a></h4>
+                <h4><a id="button" href="#contact">BUTTON🤣</a></h4>
             </div>
         </div>
     </div>
     <div class="page-body">
-        <div class="basic-info">
+        <div class="container padding-20px-bt">
+            <div class="container-title">
+                <h3>Basic Informations</h3>
+            </div>
             <div class="profile-photo">
                 <div id="photo"></div>
+            </div>
+            <div class="container-center">
+                <div id="contacts"></div>
             </div>
             <h3>Mai Anh Quân</h3>
             <h4>Mei Mike</h4>
             <h5>Software Engineer</h5>
             <h5>(Since 2020)</h5>
+            <br>
+            <p id="about-me">``<br>I began an internship in the IT Support department of a multinational technology corporation in 2020. Initially, my role was to assist users and ensure their systems and devices were functioning properly. However, as time passed, I found the repetitive tasks unfulfilling and began to feel discontent. This led me to explore scripting with batch and PowerShell to automate these processes. My journey continued as I delved into C#, JavaScript (React & Node), and other technologies to create management systems and automation tools for internal use within the company, which I thoroughly enjoyed. Although it may seem unconventional to combine IT Support with coding instead of pursuing a full-stack development path, I find it uniquely satisfying. <br>``</p>
+            <br>
         </div>
         <!-- <div class="container-line margin-20px"></div> -->
-        <div class="lt">
-            <h3>Languages and Tools</h3>
+        <div class="container">
+            <div class="container-title">
+                <h3>Languages and Tools</h3>
+            </div>
             <div class="container-lt">
-                <div class="container-langs-tools">
-                    <div class="langs-tools">
-                        <div class="lt-items">
-                            <img src="./imgs/icons/c-sharp.png" alt="c-sharp">
-                            <h5>C#</h5>
-                        </div>
-                    </div>
-                    <div class="langs-tools logo-32">
-                        <div class="lt-items">
-                            <img src="./imgs/icons/powershell.png" alt="GIT">
-                            <h5>Powershell</h5>
-                        </div>
-                    </div>
-                    <div class="langs-tools">
-                        <div class="lt-items">
-                            <img src="./imgs/icons/react.png" alt="React">
-                            <h5>React</h5>
-                        </div>
-                    </div>
-                    <div class="langs-tools">
-                        <div class="lt-items">
-                            <img src="./imgs/icons/nodejs.png" alt="NodeJS">
-                            <h5>NodeJS</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-langs-tools">
-                    <div class="langs-tools">
-                        <div class="lt-items">
-                            <img src="./imgs/icons/html-5.png" alt="html-5">
-                            <h5>HTML</h5>
-                        </div>
-                    </div>
-                    <div class="langs-tools">
-                        <div class="lt-items">
-                            <img src="./imgs/icons/css-3.png" alt="CSS">
-                            <h5>CSS</h5>
-                        </div>
-                    </div>
-                    <div class="langs-tools">
-                        <div class="lt-items">
-                            <img src="./imgs/icons/js.png" alt="JavaScript">
-                            <h5>JavaScript</h5>
-                        </div>
-                    </div>
-                </div>
-                <div class="container-langs-tools">
-                    <div class="langs-tools logo-32">
-                        <div class="lt-items">
-                            <img src="./imgs/icons/pdq-logo.png" alt="c-sharp">
-                            <h5>PDQ</h5>
-                        </div>
-                    </div>
-                    <div class="langs-tools logo-32">
-                        <div class="lt-items">
-                            <img src="./imgs/icons/vscode.png" alt="GIT">
-                            <h5>VS Code</h5>
-                        </div>
-                    </div>
-                    <div class="langs-tools logo-32">
-                        <div class="lt-items">
-                            <img src="./imgs/icons/vs.png" alt="GIT">
-                            <h5>VS</h5>
-                        </div>
-                    </div>
-                    <div class="langs-tools">
-                        <div class="lt-items">
-                            <img src="./imgs/icons/git.png" alt="GIT">
-                            <h5>GIT</h5>
-                        </div>
-                    </div>
-                </div>
+                <h4>Languages:<br></h4>
+                <div id="langs"></div>
+                <h4>Tools:<br></h4>
+                <div id="tools"></div>
+                <h4>Environments, Testing, Other:<br></h4>
+                <div id="env-other"></div>
+                <h4>Operating Systems:<br></h4>
+                <div id="os"></div>
             </div>
         </div>
     </div>
-    <!-- <div id="content"></div> -->
-    <script src="./scripts/marked.min.js"></script>
+    <div id="content"></div>
+    <!-- <script src="./scripts/script.js"></script> -->
+    
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            fetch('./markdown/content.md')
-                .then(response => response.text())
-                .then(markdownText => {
-                    const htmlContent = marked.parse(markdownText);
-                    document.getElementById('content').innerHTML = htmlContent;
-                })
-                .catch(error => console.error('Error fetching the markdown file:', error));
+        // Fetch the JSON file
+        fetch('./configs/langs-and-tools.json')
+    .then(response => response.json())
+    .then(data => {
+        // Duyệt qua mảng các đối tượng
+        data.forEach(item => {
+            
+            const img = document.createElement('img');
+            img.className = 'logo-32';
+            
+            img.src = item.url;
+
+            
+            img.alt = item.name;
+            
+            const div = document.createElement('div');
+            div.className = 'lt-items';
+            div.appendChild(img);
+            
+            const h6 = document.createElement('h6');
+            h6.textContent = item.name;
+            div.appendChild(h6);
+
+            switch (item.type) {
+                case 0:
+                    document.getElementById('langs').appendChild(div);
+                    break;
+                case 1:
+                    document.getElementById('tools').appendChild(div);
+                    break;
+                case 2:
+                    document.getElementById('env-other').appendChild(div);
+                    break;
+                case 3:
+                    document.getElementById('os').appendChild(div);
+                    break;
+                case 5:
+                    const link = document.createElement('a');
+                    link.href = item.target;
+                    link.title = item.name;
+                    link.appendChild(img);
+                    document.getElementById('contacts').appendChild(link);
+                    break;
+            }
         });
+    })
+    .catch(error => console.error('Error:', error));
+
     </script>
 </body>
 </html>
