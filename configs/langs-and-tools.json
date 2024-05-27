@@ -89,5 +89,11 @@
         "url": "https://github.com/devicons/devicon/raw/master/icons/github/github-original.svg",
         "type": 5,
         "target": "https://github.com/anhquanpbc"
+    },
+    {
+        "name": "Gmail",
+        "url": "./imgs/icons/gmail.svg",
+        "type": 5,
+        "target": "mailto:anhquanc3k43pbc@gmail.com"
     }
 ]
