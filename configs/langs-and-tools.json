@@ -95,5 +95,25 @@
         "url": "./imgs/icons/gmail.svg",
         "type": 5,
         "target": "mailto:anhquanc3k43pbc@gmail.com"
+    },
+    {
+        "name": "Confluence",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/confluence/confluence-original.svg",
+        "type": 2
+    },
+    {
+        "name": "BitBucket",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/bitbucket/bitbucket-original.svg",
+        "type": 2
+    },
+    {
+        "name": "Github",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/github/github-original.svg",
+        "type": 2
+    },
+    {
+        "name": "Gitlab",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/gitlab/gitlab-original.svg",
+        "type": 2
     }
 ]
