@@ -10,6 +10,10 @@ body {
     background-color: #3F4E4F;
 }
 
+body img {
+    cursor: pointer;
+}
+
 /* Header styles */
 .page-header {
     display: flex;
@@ -17,6 +21,7 @@ body {
     width: 100%;
     height: 70px;
     background-color: #181d1f;
+    box-shadow: #181d1f 5px 5px 5px;
 }
 
 #site-name {
@@ -59,6 +64,7 @@ body {
     background-color: #2C3639;
     border-radius: 15px;
     margin-bottom: 20px;
+    box-shadow: #181d1f 5px 5px 15px;
 }
 
 .profile-photo {
@@ -77,6 +83,7 @@ body {
     background-image: url('../imgs/kakashibw.jpg');
     background-size: cover;
     background-position: center;
+    box-shadow: #181d1f 5px 5px 15px;
 }
 
 .container h3,
@@ -110,7 +117,7 @@ h5 {
 #contacts {
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 15px;
     /* tự động cho item xuống hàng dưới nếu không đủ chiều rộng */
     flex-wrap: wrap;
 }
@@ -133,7 +140,7 @@ h5 {
 }
 
 #contacts img {
-    color: white;
+    /* color: white; */
     text-decoration: none;
 }
 
@@ -209,6 +216,18 @@ h6 {
 .logo-32 {
     width: 32px;
     height: 32px;
+    transition: transform 0.5s;
+    background-color: none;
+    fill: none;
+}
+
+.logo-32:hover{
+    transform: scale(1.4);
+}
+
+.logo-32 img {
+    width: 100%;
+    height: 100%;
 }
 
 /* Responsive styles */

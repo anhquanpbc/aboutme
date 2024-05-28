@@ -1,24 +1,46 @@
+fetch('./configs/langs-and-tools.json')
+            .then(response => response.json())
+            .then(data => {
+                // Duyệt qua mảng các đối tượng
+                data.forEach(item => {
 
-// Fetch the JSON file
-fetch('../configs/langs-and-tools.json')
-    .then(response => response.json())
-    .then(data => {
-        // Get the div where you want to add the icons
-        const div = document.getElementById('langs');
+                    const img = document.createElement('img');
+                    img.className = 'logo-32';
 
-        // Loop through the array of objects
-        data.forEach(item => {
-            // Create a new img element
-            const img = document.createElement('img');
+                    img.src = item.url;
+                    img.title = item.name;
+                    img.alt = item.name;
 
-            // Set the src attribute of the img element
-            img.src = item.url;
+                    const div = document.createElement('div');
+                    div.className = 'lt-items';
+                    div.appendChild(img);
 
-            // Set the alt attribute of the img element
-            img.alt = item.name;
+                    const h6 = document.createElement('h6');
+                    h6.textContent = item.name;
+                    div.appendChild(h6);
 
-            // Add the img element to the div
-            div.appendChild(img);
-        });
-    })
-    .catch(error => console.error('Error:', error));
+                    switch (item.type) {
+                        case 0:
+                            document.getElementById('langs').appendChild(div);
+                            break;
+                        case 1:
+                            document.getElementById('tools').appendChild(div);
+                            break;
+                        case 2:
+                            document.getElementById('env-other').appendChild(div);
+                            break;
+                        case 3:
+                            document.getElementById('os').appendChild(div);
+                            break;
+                        case 5:
+                            const link = document.createElement('a');
+                            link.href = item.target;
+                            link.target = "_blank";
+                            link.title = item.name;
+                            link.appendChild(img);
+                            document.getElementById('contacts').appendChild(link);
+                            break;
+                    }
+                });
+            })
+            .catch(error => console.error('Error:', error));
