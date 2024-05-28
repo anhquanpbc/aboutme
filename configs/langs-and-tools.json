@@ -104,16 +104,16 @@
     {
         "name": "BitBucket",
         "url": "https://github.com/devicons/devicon/raw/master/icons/bitbucket/bitbucket-original.svg",
-        "type": 2
+        "type": 1
     },
     {
         "name": "Github",
         "url": "https://github.com/devicons/devicon/raw/master/icons/github/github-original.svg",
-        "type": 2
+        "type": 1
     },
     {
         "name": "Gitlab",
         "url": "https://github.com/devicons/devicon/raw/master/icons/gitlab/gitlab-original.svg",
-        "type": 2
+        "type": 1
     }
 ]
