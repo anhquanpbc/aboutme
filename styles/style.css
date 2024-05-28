@@ -78,10 +78,14 @@ body {
     background-size: cover;
     background-position: center;
 }
-.container h3, h4, h5 {
+
+.container h3,
+h4,
+h5 {
     text-align: center;
     color: white;
 }
+
 .lt h3 {
     color: white;
     width: 100%;
@@ -97,21 +101,27 @@ body {
     gap: 20px;
 }
 
-#langs, #tools, #env-other, #os, #contacts {
+#langs,
+#tools,
+#env-other,
+#os,
+#contacts {
     display: flex;
     flex-direction: row;
     gap: 10px;
     /* tự động cho item xuống hàng dưới nếu không đủ chiều rộng */
     flex-wrap: wrap;
 }
-.container-center{
+
+.container-center {
     width: 100%;
     display: flex;
     justify-content: center;
 }
+
 #contacts {
     justify-content: center;
-    background-color:aliceblue;
+    background-color: aliceblue;
     width: fit-content;
     padding: 2px 50px;
     border-radius: 15px;
@@ -147,7 +157,7 @@ body {
     background-color: #2C3639;
 }
 
-.container-title{
+.container-title {
     background-color: #181d1f;
     height: 50px;
     width: 100%;
@@ -161,19 +171,43 @@ body {
     padding: 0;
 }
 
-#about-me{
+#about-me {
     color: white;
     text-align: left;
     padding: 0 20px 0 20px;
     font-size: 15px;
 }
 
+.container-ll {
+    background-color: #181d1f;
+    width: auto;
+    margin: 10px 30px;
+    opacity: 0.8;
+    border-radius: 15px;
+}
+
+.locations-langs {
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.locations-langs h5,
+h6 {
+    color: white;
+}
+
+.locations-langs img {
+    width: 40px;
+}
+
 /* icon img 32px style*/
-.logo-32{
+.logo-32 {
     width: 32px;
     height: 32px;
 }
-    
+
 /* Responsive styles */
 /* @media (max-width: 600px) {
     
@@ -185,12 +219,14 @@ body {
         flex-direction: column;
         align-items: center;
     }
+
     .container {
         width: 100%;
     }
 }
 
 @media (min-width: 1039px) {
+
     /* Styles for large screens (desktops) */
     .page-body {
         /* display: grid;
@@ -202,6 +238,7 @@ body {
         width: 100%;
         /* align-items: center; */
     }
+
     .container {
         width: 49%;
     }

@@ -1,11 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="styles/style.css">
     <title>Mai Anh Quân | anhquanpbc</title>
 </head>
+
 <body>
     <div class="page-header">
         <!-- <h2 id="site-name">anhquanpbc</h2> -->
@@ -33,7 +35,33 @@
             <h5>Software Engineer</h5>
             <h5>(Since 2020)</h5>
             <br>
-            <p id="about-me">``<br>I began an internship in the IT Support department of a multinational technology corporation in 2020. Initially, my role was to assist users and ensure their systems and devices were functioning properly. However, as time passed, I found the repetitive tasks unfulfilling and began to feel discontent. This led me to explore scripting with batch and PowerShell to automate these processes. My journey continued as I delved into C#, JavaScript (React & Node), and other technologies to create management systems and automation tools for internal use within the company, which I thoroughly enjoyed. Although it may seem unconventional to combine IT Support with coding instead of pursuing a full-stack development path, I find it uniquely satisfying. <br>``</p>
+            <p id="about-me">``<br>I began an internship in the IT Support department of a multinational technology
+                corporation in 2020. Initially, my role was to assist users and ensure their systems and devices were
+                functioning properly. However, as time passed, I found the repetitive tasks unfulfilling and began to
+                feel discontent. This led me to explore scripting with batch and PowerShell to automate these processes.
+                My journey continued as I delved into C#, JavaScript (React & Node), and other technologies to create
+                management systems and automation tools for internal use within the company, which I thoroughly enjoyed.
+                Although it may seem unconventional to combine IT Support with coding instead of pursuing a full-stack
+                development path, I find it uniquely satisfying. <br>``</p>
+            <br>
+            <div class="container-center container-ll">
+                <div class="locations-langs">
+                    <h5>Nationality</h5>
+                    <img src="./imgs/icons/vietnam.png" alt="vietnam" title="Vietnam">
+                </div>
+                <div class="locations-langs">
+                    <h5>Currently working locations</h5>
+                    <img src="./imgs/icons/taiwan.png" alt="taiwan" title="Taiwan">
+                </div>
+                <div class="locations-langs">
+                    <h5>Languages</h5>
+                    <div style="display: flex; flex-direction: row; gap: 10px; margin-top: 10px;">
+                        <h6>Vienamese</h6>
+                        <h6>English</h6>
+                        <h6>Mandarin Chinese</h6>
+                    </div>
+                </div>
+            </div>
             <br>
         </div>
         <!-- <div class="container-line margin-20px"></div> -->
@@ -55,56 +83,57 @@
     </div>
     <div id="content"></div>
     <!-- <script src="./scripts/script.js"></script> -->
-    
+
     <script>
         // Fetch the JSON file
         fetch('./configs/langs-and-tools.json')
-    .then(response => response.json())
-    .then(data => {
-        // Duyệt qua mảng các đối tượng
-        data.forEach(item => {
-            
-            const img = document.createElement('img');
-            img.className = 'logo-32';
-            
-            img.src = item.url;
+            .then(response => response.json())
+            .then(data => {
+                // Duyệt qua mảng các đối tượng
+                data.forEach(item => {
 
-            
-            img.alt = item.name;
-            
-            const div = document.createElement('div');
-            div.className = 'lt-items';
-            div.appendChild(img);
-            
-            const h6 = document.createElement('h6');
-            h6.textContent = item.name;
-            div.appendChild(h6);
+                    const img = document.createElement('img');
+                    img.className = 'logo-32';
 
-            switch (item.type) {
-                case 0:
-                    document.getElementById('langs').appendChild(div);
-                    break;
-                case 1:
-                    document.getElementById('tools').appendChild(div);
-                    break;
-                case 2:
-                    document.getElementById('env-other').appendChild(div);
-                    break;
-                case 3:
-                    document.getElementById('os').appendChild(div);
-                    break;
-                case 5:
-                    const link = document.createElement('a');
-                    link.href = item.target;
-                    link.title = item.name;
-                    link.appendChild(img);
-                    document.getElementById('contacts').appendChild(link);
-                    break;
-            }
-        });
-    })
-    .catch(error => console.error('Error:', error));
+                    img.src = item.url;
+
+
+                    img.alt = item.name;
+
+                    const div = document.createElement('div');
+                    div.className = 'lt-items';
+                    div.appendChild(img);
+
+                    const h6 = document.createElement('h6');
+                    h6.textContent = item.name;
+                    div.appendChild(h6);
+
+                    switch (item.type) {
+                        case 0:
+                            document.getElementById('langs').appendChild(div);
+                            break;
+                        case 1:
+                            document.getElementById('tools').appendChild(div);
+                            break;
+                        case 2:
+                            document.getElementById('env-other').appendChild(div);
+                            break;
+                        case 3:
+                            document.getElementById('os').appendChild(div);
+                            break;
+                        case 5:
+                            const link = document.createElement('a');
+                            link.href = item.target;
+                            link.title = item.name;
+                            link.appendChild(img);
+                            document.getElementById('contacts').appendChild(link);
+                            break;
+                    }
+                });
+            })
+            .catch(error => console.error('Error:', error));
 
     </script>
 </body>
+
 </html>
