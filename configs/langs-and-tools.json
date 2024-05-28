@@ -96,6 +96,12 @@
         "target": "https://github.com/anhquanpbc"
     },
     {
+        "name": "Discord",
+        "url": "./imgs/icons/discord-mark-blue.svg",
+        "type": 5,
+        "target": "https://discordapp.com/users/465233362412634113"
+    },
+    {
         "name": "Gmail",
         "url": "./imgs/icons/gmail.svg",
         "type": 5,
