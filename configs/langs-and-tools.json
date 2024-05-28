@@ -102,6 +102,12 @@
         "target": "https://discordapp.com/users/465233362412634113"
     },
     {
+        "name": "Reddit",
+        "url": "./imgs/icons/reddit.svg",
+        "type": 5,
+        "target": "https://www.reddit.com/user/anhquanpbc/"
+    },
+    {
         "name": "Gmail",
         "url": "./imgs/icons/gmail.svg",
         "type": 5,

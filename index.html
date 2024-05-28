@@ -125,6 +125,7 @@
                         case 5:
                             const link = document.createElement('a');
                             link.href = item.target;
+                            link.target = "_blank";
                             link.title = item.name;
                             link.appendChild(img);
                             document.getElementById('contacts').appendChild(link);
