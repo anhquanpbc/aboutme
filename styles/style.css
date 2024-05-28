@@ -101,6 +101,8 @@ h5 {
     gap: 20px;
 }
 
+.container-lt h4 {}
+
 #langs,
 #tools,
 #env-other,
@@ -179,9 +181,10 @@ h5 {
 }
 
 .container-ll {
-    background-color: #181d1f;
+    display: flex;
+    flex-direction: column;
     width: auto;
-    margin: 10px 30px;
+    margin: 10px 20px;
     opacity: 0.8;
     border-radius: 15px;
 }
@@ -199,7 +202,7 @@ h6 {
 }
 
 .locations-langs img {
-    width: 40px;
+    width: 32px;
 }
 
 /* icon img 32px style*/

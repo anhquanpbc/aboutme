@@ -50,8 +50,8 @@
         "type": 1
     },
     {
-        "name": ".NET",
-        "url": "https://github.com/devicons/devicon/raw/master/icons/dot-net/dot-net-original.svg",
+        "name": "dotNET",
+        "url": "./imgs/icons/dotNet.svg",
         "type": 2
     },
     {
