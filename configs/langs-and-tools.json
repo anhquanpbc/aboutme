@@ -87,7 +87,17 @@
     {
         "name": "Postman",
         "url": "https://github.com/devicons/devicon/raw/master/icons/postman/postman-original.svg",
-        "type": 2
+        "type": 1
+    },
+    {
+        "name": "PowerAutomate",
+        "url": "./imgs/icons/PowerAutomate_scalable.svg",
+        "type": 1
+    },
+    {
+        "name": "PowerApps",
+        "url": "./imgs/icons/PowerApps_scalable.svg",
+        "type": 1
     },
     {
         "name": "Github",
@@ -121,16 +131,16 @@
     {
         "name": "BitBucket",
         "url": "https://github.com/devicons/devicon/raw/master/icons/bitbucket/bitbucket-original.svg",
-        "type": 1
+        "type": 2
     },
     {
         "name": "Github",
         "url": "https://github.com/devicons/devicon/raw/master/icons/github/github-original.svg",
-        "type": 1
+        "type": 2
     },
     {
         "name": "Gitlab",
         "url": "https://github.com/devicons/devicon/raw/master/icons/gitlab/gitlab-original.svg",
-        "type": 1
+        "type": 2
     }
 ]
