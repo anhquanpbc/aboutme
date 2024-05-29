@@ -1,24 +1,46 @@
-
-// Fetch the JSON file
-fetch('../configs/langs-and-tools.json')
+fetch('./configs/langs-and-tools.json')
     .then(response => response.json())
     .then(data => {
-        // Get the div where you want to add the icons
-        const div = document.getElementById('langs');
-
-        // Loop through the array of objects
+        // Duyệt qua mảng các đối tượng
         data.forEach(item => {
-            // Create a new img element
+
             const img = document.createElement('img');
+            img.className = 'logo-32';
 
-            // Set the src attribute of the img element
             img.src = item.url;
-
-            // Set the alt attribute of the img element
+            img.title = item.name;
             img.alt = item.name;
 
-            // Add the img element to the div
+            const div = document.createElement('div');
+            div.className = 'lt-items';
             div.appendChild(img);
+
+            const h6 = document.createElement('h6');
+            h6.textContent = item.name;
+            div.appendChild(h6);
+
+            switch (item.type) {
+                case 0:
+                    document.getElementById('langs').appendChild(div);
+                    break;
+                case 1:
+                    document.getElementById('tools').appendChild(div);
+                    break;
+                case 2:
+                    document.getElementById('env-other').appendChild(div);
+                    break;
+                case 3:
+                    document.getElementById('os').appendChild(div);
+                    break;
+                case 5:
+                    const link = document.createElement('a');
+                    link.href = item.target;
+                    link.target = "_blank";
+                    link.title = item.name;
+                    link.appendChild(img);
+                    document.getElementById('contacts').appendChild(link);
+                    break;
+            }
         });
     })
     .catch(error => console.error('Error:', error));

@@ -70,7 +70,7 @@
         "type": 2
     },
     {
-        "name": "Windows",
+        "name": "Windows❤️",
         "url": "https://github.com/devicons/devicon/raw/master/icons/windows11/windows11-original.svg",
         "type": 3
     },
@@ -104,6 +104,12 @@
         "url": "https://github.com/devicons/devicon/raw/master/icons/github/github-original.svg",
         "type": 5,
         "target": "https://github.com/anhquanpbc"
+    },
+    {
+        "name": "Linkedin",
+        "url": "https://github.com/devicons/devicon/raw/master/icons/linkedin/linkedin-original.svg",
+        "type": 5,
+        "target": "https://www.linkedin.com/in/anhquanpbc/"
     },
     {
         "name": "Discord",

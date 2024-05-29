@@ -34,7 +34,6 @@
             <h3>Mai Anh Quân</h3>
             <h4>Mei Mike</h4>
             <h5>Software Engineer</h5>
-            <h5>(Since 2020)</h5>
             <br>
             <div class="container-center container-ll">
                 <div class="locations-langs">
@@ -81,59 +80,44 @@
                 <div id="os"></div>
             </div>
         </div>
+        <div class="container">
+            <div class="container-title">
+                <h3>Education and Experience</h3>
+            </div>
+            <!-- <div class="iframe-container">
+                <iframe src="https://youtube.com" title="Wikipedia"></iframe>
+            </div> -->
+            <div class="container-ee">
+                <div class="education">
+                    <h4>Education</h4>
+                    <div id="education"></div>
+                    <div class="ee-items">
+                        <div id="item" class="logo-16">
+                            <h5>
+                                <img src="./imgs/icons/education.png" alt="">
+                                Phan Boi Chau High Shool For The Gifted (2014 - 1017)
+                            </h5>
+                        </div>
+                        <div id="item" class="logo-16">
+                            <h5>
+                                <img src="./imgs/icons/education.png" alt="">
+                                Lee-Ming Institute of Technology (2019 - 2022)
+                            </h5>
+                        </div>
+                    </div>
+                </div>
+                <div class="experience">
+                    <h4>Experience</h4>
+                    <div id="experience"></div>
+                </div>
+            </div>
+        </div>
     </div>
     <div id="content"></div>
-    <!-- <script src="./scripts/script.js"></script> -->
+    <script src="./scripts/script.js"></script>
 
     <script>
         // Fetch the JSON file
-        fetch('./configs/langs-and-tools.json')
-            .then(response => response.json())
-            .then(data => {
-                // Duyệt qua mảng các đối tượng
-                data.forEach(item => {
-
-                    const img = document.createElement('img');
-                    img.className = 'logo-32';
-
-                    img.src = item.url;
-
-
-                    img.alt = item.name;
-
-                    const div = document.createElement('div');
-                    div.className = 'lt-items';
-                    div.appendChild(img);
-
-                    const h6 = document.createElement('h6');
-                    h6.textContent = item.name;
-                    div.appendChild(h6);
-
-                    switch (item.type) {
-                        case 0:
-                            document.getElementById('langs').appendChild(div);
-                            break;
-                        case 1:
-                            document.getElementById('tools').appendChild(div);
-                            break;
-                        case 2:
-                            document.getElementById('env-other').appendChild(div);
-                            break;
-                        case 3:
-                            document.getElementById('os').appendChild(div);
-                            break;
-                        case 5:
-                            const link = document.createElement('a');
-                            link.href = item.target;
-                            link.target = "_blank";
-                            link.title = item.name;
-                            link.appendChild(img);
-                            document.getElementById('contacts').appendChild(link);
-                            break;
-                    }
-                });
-            })
-            .catch(error => console.error('Error:', error));
 
     </script>
 </body>
