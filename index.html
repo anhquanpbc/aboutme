@@ -10,107 +10,123 @@
 </head>
 
 <body>
-    <div class="page-header">
+    <div id="scroll-to-top">
+        <img src="./imgs/icons/scroll-to-svgrepo-com.svg" alt="">
+    </div>
+    <div name="page-header" class="page-header">
         <!-- <h2 id="site-name">anhquanpbc</h2> -->
         <div class="home-nav-bar">
             <div class="home-nav-button">
-                <h4><a id="button" href="#home">NONE</a></h4>
-                <h4><a id="button" href="#info">SET</a></h4>
-                <h4><a id="button" href="#contact">BUTTON🤣</a></h4>
+                <h4><a class="button" id="index" href="#home">NONE</a></h4>
+                <h4><a class="button" id="button2" href="#info">SET</a></h4>
+                <h4><a class="button" id="" href="#contact">BUTTON🤣</a></h4>
             </div>
         </div>
     </div>
     <div class="page-body">
-        <div class="container padding-20px-bt">
-            <div class="container-title">
-                <h3>About me</h3>
-            </div>
-            <div class="profile-photo">
-                <div id="photo"></div>
-            </div>
-            <div class="container-center">
-                <div id="contacts"></div>
-            </div>
-            <h3>Mai Anh Quân</h3>
-            <h4>Mei Mike</h4>
-            <h5>Software Engineer</h5>
-            <br>
-            <div class="container-center container-ll">
-                <div class="locations-langs">
-                    <h5>Nationality</h5>
-                    <img src="./imgs/icons/vietnam.png" alt="vietnam" title="Vietnam">
+        <div id="home">
+            <div class="container padding-20px-bt">
+                <div class="container-title">
+                    <h3>About me</h3>
                 </div>
-                <div class="locations-langs">
-                    <h5>Currently working locations</h5>
-                    <img src="./imgs/icons/taiwan.png" alt="taiwan" title="Taiwan">
+                <div class="profile-photo">
+                    <div id="photo"></div>
                 </div>
-                <div class="locations-langs">
-                    <h5>Languages</h5>
-                    <div style="display: flex; flex-direction: row; gap: 10px; margin-top: 10px;">
-                        <h6>Vienamese</h6>
-                        <h6>English</h6>
-                        <h6>Mandarin Chinese</h6>
+                <div class="container-center">
+                    <div id="contacts"></div>
+                </div>
+                <h3>Mai Anh Quân</h3>
+                <h4>Mei Mike</h4>
+                <h5>Software Engineer</h5>
+                <br>
+                <div class="container-center container-ll">
+                    <div class="locations-langs">
+                        <h5>Nationality</h5>
+                        <img src="./imgs/icons/vietnam.png" alt="vietnam" title="Vietnam">
                     </div>
-                </div>
-            </div>
-            <br>
-            <p id="about-me">``<br>I began an internship in the IT Support department of a multinational technology
-                corporation in 2020. Initially, my role was to assist users and ensure their systems and devices were
-                functioning properly. However, as time passed, I found the repetitive tasks unfulfilling and began to
-                feel discontent. This led me to explore scripting with batch and PowerShell to automate these processes.
-                My journey continued as I delved into C#, JavaScript (React & Node), and other technologies to create
-                management systems and automation tools for internal use within the company, which I thoroughly enjoyed.
-                Although it may seem unconventional to combine IT Support with coding instead of pursuing a full-stack
-                development path, I find it uniquely satisfying. <br>``</p>
-            <br>
-        </div>
-        <!-- <div class="container-line margin-20px"></div> -->
-        <div class="container">
-            <div class="container-title">
-                <h3>Languages and Tools</h3>
-            </div>
-            <div class="container-lt">
-                <h4>Languages<br></h4>
-                <div id="langs"></div>
-                <h4>Tools<br></h4>
-                <div id="tools"></div>
-                <h4>Environments, Testing, Other<br></h4>
-                <div id="env-other"></div>
-                <h4>Operating Systems<br></h4>
-                <div id="os"></div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="container-title">
-                <h3>Education and Experience</h3>
-            </div>
-            <!-- <div class="iframe-container">
-                <iframe src="https://youtube.com" title="Wikipedia"></iframe>
-            </div> -->
-            <div class="container-ee">
-                <div class="education">
-                    <h4>Education</h4>
-                    <div id="education"></div>
-                    <div class="ee-items">
-                        <div id="item" class="logo-16">
-                            <h5>
-                                <img src="./imgs/icons/education.png" alt="">
-                                Phan Boi Chau High Shool For The Gifted (2014 - 1017)
-                            </h5>
-                        </div>
-                        <div id="item" class="logo-16">
-                            <h5>
-                                <img src="./imgs/icons/education.png" alt="">
-                                Lee-Ming Institute of Technology (2019 - 2022)
-                            </h5>
+                    <div class="locations-langs">
+                        <h5>Currently working locations</h5>
+                        <img src="./imgs/icons/taiwan.png" alt="taiwan" title="Taiwan">
+                    </div>
+                    <div class="locations-langs">
+                        <h5>Languages</h5>
+                        <div style="display: flex; flex-direction: row; gap: 10px; margin-top: 10px;">
+                            <h6>Vienamese</h6>
+                            <h6>English</h6>
+                            <h6>Mandarin Chinese</h6>
                         </div>
                     </div>
                 </div>
-                <div class="experience">
-                    <h4>Experience</h4>
-                    <div id="experience"></div>
+                <br>
+                <p id="about-me">``<br>I began an internship in the IT Support department of a multinational technology
+                    corporation in 2020. Initially, my role was to assist users and ensure their systems and devices
+                    were
+                    functioning properly. However, as time passed, I found the repetitive tasks unfulfilling and began
+                    to
+                    feel discontent. This led me to explore scripting with batch and PowerShell to automate these
+                    processes.
+                    My journey continued as I delved into C#, JavaScript (React & Node), and other technologies to
+                    create
+                    management systems and automation tools for internal use within the company, which I thoroughly
+                    enjoyed.
+                    Although it may seem unconventional to combine IT Support with coding instead of pursuing a
+                    full-stack
+                    development path, I find it uniquely satisfying. <br>``</p>
+                <br>
+            </div>
+            <!-- <div class="container-line margin-20px"></div> -->
+            <div class="container">
+                <div class="container-title">
+                    <h3>Languages and Tools</h3>
+                </div>
+                <div class="container-lt">
+                    <h4>Languages<br></h4>
+                    <div id="langs"></div>
+                    <h4>Tools<br></h4>
+                    <div id="tools"></div>
+                    <h4>Environments, Testing, Other<br></h4>
+                    <div id="env-other"></div>
+                    <h4>Operating Systems<br></h4>
+                    <div id="os"></div>
                 </div>
             </div>
+            <div class="container">
+                <div class="container-title">
+                    <h3>Education and Experience</h3>
+                </div>
+                <!-- <div class="iframe-container">
+                    <iframe src="https://youtube.com" title="Wikipedia"></iframe>
+                </div> -->
+                <div class="container-ee">
+                    <div class="education">
+                        <h4>Education</h4>
+                        <div id="education"></div>
+                        <div class="ee-items">
+                            <div id="item" class="logo-16">
+                                <h5>
+                                    <img src="./imgs/icons/education.png" alt="">
+                                    Phan Boi Chau High Shool For The Gifted (2014 - 1017)
+                                </h5>
+                            </div>
+                            <div id="item" class="logo-16">
+                                <h5>
+                                    <img src="./imgs/icons/education.png" alt="">
+                                    Lee-Ming Institute of Technology (2019 - 2022)
+                                </h5>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="experience">
+                        <h4>Experience</h4>
+                        <div id="experience"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="panel2">
+            <h1 style="margin-top: 50px; text-align: center; width: 100%;">Surprise! There's nothing here yet because I
+                haven't
+                decided what to put here, haha🤣🤣🤣</h1>
         </div>
     </div>
     <div id="content"></div>

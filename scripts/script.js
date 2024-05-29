@@ -44,3 +44,33 @@ fetch('./configs/langs-and-tools.json')
         });
     })
     .catch(error => console.error('Error:', error));
+
+function toggleMenu() {
+    document.getElementById('home').style.display = "none";
+    document.getElementById('panel2').style.display = "flex";
+    scroolToTop();
+}
+
+function getIndex() {
+    document.getElementById('panel2').style.display = "none";
+    document.getElementById('home').style.display = "flex";
+    scroolToTop();
+}
+
+function scroolToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+document.getElementById('scroll-to-top').addEventListener('click', scroolToTop);
+document.getElementById('index').addEventListener('click', getIndex);
+document.getElementById('button2').addEventListener('click', toggleMenu);
+
+window.onscroll = function () {
+    if (document.body.scrollTop > 0 || document.documentElement.scrollTop > 0) {
+        document.getElementById('scroll-to-top').style.display = "block";
+    } else {
+        document.getElementById('scroll-to-top').style.display = "none";
+    }
+}
