@@ -1,7 +1,6 @@
 fetch('./configs/langs-and-tools.json')
     .then(response => response.json())
     .then(data => {
-        // Duyệt qua mảng các đối tượng
         data.forEach(item => {
 
             const img = document.createElement('img');

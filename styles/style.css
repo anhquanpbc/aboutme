@@ -43,7 +43,7 @@ body img {
     display: inline;
 }
 
-#button {
+.button {
     color: white;
     text-decoration: none;
     margin-right: 15px;
@@ -275,6 +275,7 @@ h6 {
     
 } */
 #scroll-to-top {
+    display: none;
     position: fixed;
     right: 20px;
     bottom: 10px;
